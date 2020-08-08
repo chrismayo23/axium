@@ -6,5 +6,29 @@
   width: 900px;
   height: 100%;
   margin: 0 auto;
-  color: rgb(235, 236, 237)
+  color: rgb(235, 236, 237);
+}
+.small-logo {
+  margin-left: 5px;
+}
+.footer-text {
+  font-size: 11px;
+  position: relative;
+  top: 2px;
+  // left: 17px;
+}
+.right-side-content {
+  position: relative;
+  top: 6px;
+}
+.facebook {
+  margin-left: 12px;
+}
+.twitter {
+  margin-left: 12px;
+  position: relative;
+  top: 1px;
+}
+.bar {
+  margin: 0 4px;
 }
