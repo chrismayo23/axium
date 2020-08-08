@@ -9,11 +9,16 @@ import { ProductData } from '../data/productData'
 })
 export class ContentComponent implements OnInit {
   product: ProductModel;
+  Arr = Array;
 
   constructor() { }
 
   ngOnInit(): void {
     this.product = ProductData;
     console.log(this.product);
+  }
+
+  openReviewProductModal() {
+    console.log('open modal')
   }
 }

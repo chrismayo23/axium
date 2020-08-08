@@ -4,9 +4,7 @@
       <u>Clothing</u> > <b>Outerwear</b>
     </div>
     <div fxLayout="row">
-      <div>
-        <img class="image1" width="300" src="{{ product.img_one_url }}" alt="jacket">
-      </div>
+      <img class="image1" width="300" src="{{ product.img_one_url }}" alt="image-one">
       <div class="product-info" fxLayout="column">
         <div class="product-name">{{ product.name }}</div>
         <ng-container *ngFor="let descriptor of product.descriptors">
@@ -30,8 +28,50 @@
   </div>
 </div>
 <div class="experience">
-  <div class="content">test</div>
+  <div class="content" fxLayout>
+    <div>
+      <img class="image2" width="450" src="{{ product.img_two_url }}" alt="image-two">
+    </div>
+    <div class="description">
+      <ng-container *ngFor="let description of product.descriptions">
+        <p>
+          {{ description }}
+        </p>
+      </ng-container>
+    </div>
+  </div>
 </div>
 <div class="reviews">
-  <div class="content">test</div>
+  <div class="content" fxLayout="column">
+    <div class="review-title-row-one" fxLayout>
+      <div class="review-title">Reviews</div>
+      <div class="review-product" (click)="openReviewProductModal()">Write a review on this product</div>
+    </div>
+    <ng-container *ngFor="let review of product.reviews">
+      <div class="review-container" fxLayout>
+        <div>
+          <img class="image3" width="80" src="{{ review.img_photo_url }}" alt="image-two">
+          <div class="reviewer-name">{{ review.review_name }}</div>
+        </div>
+        <div>
+          <div fxLayout>
+            <div class="review-content-title">
+              {{ review.review_title }}
+            </div>
+            <div>
+              {{ review.review_date }}
+            </div>
+            <div class="stars" >
+              <span *ngFor="let i of Arr(review.stars).fill(1)">
+                &#9733;
+              </span>
+            </div>
+          </div>
+          <div class="review-content-description">
+            {{ review.review_description }}
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
 </div>
