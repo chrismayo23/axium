@@ -1,0 +1,51 @@
+.header-wrapper {
+  background-color: black;
+  height: 130px;
+}
+.content {
+  width: 900px;
+  height: 100%;
+  margin: 0 auto;
+  color: rgb(235, 236, 237);
+}
+.main-logo {
+  margin-left: 15px;
+}
+.search-icon {
+  position: relative;
+  top: 7px;
+  background-color:  rgb(235, 236, 237);
+  height: 10px;
+  padding: 5px;
+}
+input {
+  border: none;
+  height: 18px;
+  width: 180px;
+  font-size: 10px;
+  background-color:  rgb(235, 236, 237);
+  padding-left: 11px;
+}
+.search-row {
+  margin-bottom: 10px;
+}
+.facebook {
+  margin-left: 4px;
+}
+.twitter {
+  margin-left: 15px;
+  position: relative;
+  top: 3px;
+}
+.header-text {
+  font-size: 11px;
+  position: relative;
+  top: 2px;
+  left: 17px;
+}
+.bar {
+  margin: 0 4px;
+}
+.icon-row {
+  margin-top: 7px;
+}
