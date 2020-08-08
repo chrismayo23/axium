@@ -20,5 +20,33 @@
 }
 .clothing-text {
   padding: 20px 20px 0px;
-  color: rgb(235, 236, 237)
+  color: rgb(235, 236, 237);
+}
+.product-info {
+  color: rgb(235, 236, 237);
+  margin-left: 60px;
+}
+.product-name {
+  font-size: 28px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+.product-descriptor {
+  font-size: 14px;
+  margin-bottom: 7px;
+}
+.buttons {
+  width: 102px;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+.buttons-bottom {
+  width: 102px;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+.quantity {
+  font-size: 11px;
+  position: relative;
+  top: 16px;
 }

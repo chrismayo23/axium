@@ -5,20 +5,25 @@
     </div>
     <div fxLayout="row">
       <div>
-        <img class="image1" width="300" src="../assets/tough-mojo-jacket-img1.png" alt="jacket">
+        <img class="image1" width="300" src="{{ product.img_one_url }}" alt="jacket">
       </div>
-      <div fxLayout="column">
-        <div>title</div>
-        <div>descriptors</div>
+      <div class="product-info" fxLayout="column">
+        <div class="product-name">{{ product.name }}</div>
+        <ng-container *ngFor="let descriptor of product.descriptors">
+          <div class="product-descriptor">
+            {{ descriptor }}
+          </div>
+        </ng-container>
         <div fxLayout>
-          <div></div>
-          <div></div>
+          <img class="buttons" src="../../assets/size.png" alt="size">
+          <img class="buttons" src="../../assets/color.png" alt="color">
+        </div>
+        <div class="quantity">
+          <i>Quantity</i>
         </div>
         <div fxLayout>
-          <div></div>
-          <div>
-            <button>Add to Cart</button>
-          </div>
+          <img class="buttons-bottom" src="../../assets/adjuster.png" alt="quantity">
+          <img class="buttons-bottom" src="../../assets/add-to-cart.png" alt="add-to-button">
         </div>
       </div>
     </div>
