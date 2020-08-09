@@ -1,27 +1,18 @@
 <div class="action-bar-wrapper">
   <div class="content">
     <div class="action-bar" fxLayout fxLayoutAlign="space-between start">
-      <div>
-        Camping <span class="carrot">&#8964;</span><span class="bar">&#124;</span>
-      </div>
-      <div class="menu-item">
-        Clothing <span class="carrot">&#8964;</span><span class="bar">&#124;</span>
-        <div class="submenu">
-          <div>Outerwear</div>
-          <div>Hiking Shoes/Boots</div>
-          <div>Gloves</div>
-          <div>Hats</div>
+      <ng-container *ngFor="let menuItem of menu.menuItem; let i = index">
+        <div class="menu-item">
+          {{ menuItem.menuItemName }}
+          <span class="carrot">&#8964;</span>
+          <span *ngIf="i !== menu.menuItem.length - 1" class="bar">&#124;</span>
+          <div *ngIf="menuItem.subMenuItem" class="submenu">
+            <ng-container *ngFor="let subMenuItem of menuItem.subMenuItem">
+              <div>{{ subMenuItem}}</div>
+            </ng-container>
+          </div>
         </div>
-      </div>
-      <div>
-        Fishing <span class="carrot">&#8964;</span><span class="bar">&#124;</span>
-      </div>
-      <div>
-        Hiking <span class="carrot">&#8964;</span><span class="bar">&#124;</span>
-      </div>
-      <div>
-        Biking <span class="carrot">&#8964;</span>
-      </div>
+      </ng-container>
     </div>
   </div>
 </div>

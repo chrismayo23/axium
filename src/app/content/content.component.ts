@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductModel } from '../data/product.model';
-import { ProductData } from '../data/productData'
+import { ProductData } from '../data/productData';
 
 @Component({
   selector: 'app-content',
@@ -15,7 +15,6 @@ export class ContentComponent implements OnInit {
 
   ngOnInit(): void {
     this.product = ProductData;
-    console.log(this.product);
   }
 
   openReviewProductModal() {
