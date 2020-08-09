@@ -99,3 +99,80 @@
   bottom: 2px;
   left: 20px;
 }
+.review-title-modal {
+  font-size: 14px;
+  margin: 0 10px 0;
+  color: gray;
+}
+.review-name {
+  margin: 12px 0 0;
+}
+.review-name-two {
+  position: relative;
+  bottom: 5px;
+}
+.review-name-three {
+  margin: 4px 0 10px;
+}
+.review-button {
+  font-size: 12px;
+  height: 35px;
+  width: 110px;
+  color: white;
+  background-color: rgb(70, 140, 154);
+  border-radius: 3px;
+  border: solid lightgray 1px;
+}
+input,
+textarea {
+  border: solid lightgray 1px;
+}
+fieldset,
+label {
+  margin: 0;
+  padding: 0;
+}
+fieldset {
+  position: relative;
+  bottom: 10px;
+}
+/****** Style Star Rating Widget *****/
+.rating {
+  border: none;
+  float: left;
+}
+.rating > input {
+  display: none;
+}
+.rating > label:before {
+  margin: 4px 2px 0;
+  font-size: 1.25em;
+  display: inline-block;
+  content: "\2605";
+}
+.rating > label {
+  color: #ddd;
+  float: right;
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label {
+  color: rgb(70, 140, 154);
+  cursor: pointer;
+} /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label {
+  color: rgb(122, 171, 180);
+}
+.form-warning {
+  position: relative;
+  bottom: 16px;
+  right: 50px;
+  color: rgb(204, 51, 51);
+  font-size: 11px;
+}
