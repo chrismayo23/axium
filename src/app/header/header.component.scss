@@ -13,7 +13,6 @@
 }
 .search-icon {
   position: relative;
-  top: 7px;
   background-color:  rgb(235, 236, 237);
   height: 10px;
   padding: 5px;
@@ -28,6 +27,7 @@ input {
 }
 .search-row {
   margin-bottom: 10px;
+  border: solid red 1px;
 }
 .facebook {
   margin-left: 4px;
