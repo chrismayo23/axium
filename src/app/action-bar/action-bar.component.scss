@@ -48,10 +48,9 @@
   border-bottom: none;
 }
 .clothing-submenu div:hover {
-  position: relative;
-  right: 1px;
-  width: calc(100% + 3px);
+  border-bottom: 1px solid transparent;
   margin: 0;
   background-color: rgb(90, 150, 163);
   color: rgb(235, 236, 237);
+  outline: rgb(90, 150, 163) solid 1px;
 }
