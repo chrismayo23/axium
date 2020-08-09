@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContentComponent } from './content/content.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ModalModule } from './modal';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    ModalModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -55,7 +55,7 @@
   <div class="content" fxLayout="column">
     <div class="review-title-row-one" fxLayout>
       <div class="review-title">Reviews</div>
-      <div class="review-product" (click)="openReviewProductModal()">Write a review on this product</div>
+      <div class="review-product" (click)="openModal('custom-modal-1')">Write a review on this product</div>
     </div>
     <ng-container *ngFor="let review of product.reviews">
       <div class="review-container" fxLayout>
@@ -85,3 +85,12 @@
     </ng-container>
   </div>
 </div>
+<jw-modal id="custom-modal-1">
+  <h1>A Custom Modal!</h1>
+  <button (click)="closeModal('custom-modal-1');">Close</button>
+</jw-modal>
+
+<jw-modal id="custom-modal-2">
+  <h1 style="height:1000px">A Tall Custom Modal!</h1>
+  <button (click)="closeModal('custom-modal-2');">Close</button>
+</jw-modal>
