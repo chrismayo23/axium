@@ -86,6 +86,24 @@
   </div>
 </div>
 <app-modal id="custom-modal-1">
-  <h1>A Custom Modal!</h1>
-  <button (click)="closeModal('custom-modal-1');">Close</button>
+  <form [formGroup]="reviewForm" (ngSubmit)="onSubmit()">
+    <div fxLayout="column">
+      <div class="review-name" fxLayout>
+        <div class="review-title-modal">
+          Please rate the <b>{{ product.name }}</b>
+        </div>
+      </div>
+      <div class="review-name" fxLayout>
+        <div class="review-title-modal">
+          Review Title:
+        </div>
+        <input formControlName="title" fxFlex>
+      </div>
+      <textarea class="review-name-two" rows="10" formControlName="reviewContent"
+        placeholder=" - Write your review here -"></textarea>
+      <div fxLayout fxLayoutAlign="end center">
+        <button class="review-button">Submit Review</button>
+      </div>
+    </div>
+  </form>
 </app-modal>

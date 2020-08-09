@@ -11,6 +11,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ContentComponent } from './content/content.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalModule } from './modal';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ModalModule } from './modal';
     AppRoutingModule,
     HttpClientModule,
     FlexLayoutModule,
-    ModalModule
+    ModalModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
