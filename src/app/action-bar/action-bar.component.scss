@@ -23,3 +23,36 @@
 .bar {
   margin-left: 40px;
 }
+ul {
+  list-style-type: none;
+}
+.clothing-submenu {
+  visibility: hidden;
+  position: relative;
+  top: 2px;
+  right: 37px;
+  z-index: 107;
+  width: 170px;
+  border: solid lightgray 1px;
+  background-color: rgb(235, 236, 237);
+  font-size: 14px;
+  text-align: center;
+}
+.clothing:hover > .clothing-submenu {
+  visibility: visible;
+  cursor: pointer;
+}
+.clothing-submenu div {
+  margin: 0 15px;
+  padding: 5px 0;
+  border-bottom: solid lightgray 1px;
+}
+
+.clothing-submenu div:hover {
+  position: relative;
+  right: 1px;
+  width: calc(100% + 2px);
+  margin: 0;
+  background-color: rgb(90, 150, 163);
+  color: rgb(235, 236, 237);
+}
