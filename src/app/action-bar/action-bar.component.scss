@@ -23,7 +23,7 @@
 .bar {
   margin-left: 40px;
 }
-.clothing-submenu {
+.submenu {
   visibility: hidden;
   position: relative;
   top: 2px;
@@ -35,19 +35,19 @@
   font-size: 14px;
   text-align: center;
 }
-.clothing:hover > .clothing-submenu {
+.menu-item:hover > .submenu {
   visibility: visible;
   cursor: pointer;
 }
-.clothing-submenu div {
+.submenu div {
   margin: 0 15px;
   padding: 5px 0;
   border-bottom: solid lightgray 1px;
 }
-.clothing-submenu div:nth-child(4) {
+.submenu div:last-child {
   border-bottom: none;
 }
-.clothing-submenu div:hover {
+.submenu div:hover {
   border-bottom: 1px solid transparent;
   margin: 0;
   background-color: rgb(90, 150, 163);
