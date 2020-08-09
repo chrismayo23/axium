@@ -25,6 +25,11 @@ export class ContentComponent implements OnInit {
 
   ngOnInit(): void {
     this.product = ProductData;
+    this.reviewForm.valueChanges.subscribe(e => {
+      if (this.reviewForm.valid) {
+        this.displayWarning = false;
+      }
+    })
   }
 
   openModal(id: string) {
