@@ -14,10 +14,22 @@ export class ContentComponent implements OnInit {
   product: ProductModel;
   Arr = Array;
   reviewForm: FormGroup;
+  checked_5: boolean;
+  checked_45: boolean;
+  checked_4: boolean;
+  checked_35: boolean;
+  checked_3: boolean;
+  checked_25: boolean;
+  checked_2: boolean;
+  checked_15: boolean;
+  checked_1: boolean;
+  checked_05: boolean;
+  checked_0: boolean;
 
   constructor(private fb: FormBuilder, private modalService: ModalService) {
     this.reviewForm = fb.group({
       title: [null],
+      rating: [null],
       reviewContent: [null]
     });
   }
@@ -27,6 +39,7 @@ export class ContentComponent implements OnInit {
   }
 
   openModal(id: string) {
+    this.reviewForm.reset()
     this.modalService.open(id);
   }
 
@@ -37,7 +50,7 @@ export class ContentComponent implements OnInit {
   onSubmit() {
     this.closeModal('custom-modal-1');
     console.log('Title:', this.reviewForm.value.title);
-    // console.log('Stars:', this.reviewForm.value.stars);
+    console.log('Rating:', this.reviewForm.value.rating);
     console.log('Review Content:', this.reviewForm.value.reviewContent);
   }
 }
