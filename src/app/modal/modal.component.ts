@@ -5,7 +5,7 @@ import { ModalService } from './modal.service';
 @Component({
   selector: 'app-modal',
   templateUrl: 'modal.component.html',
-  styleUrls: ['modal.component.less'],
+  styleUrls: ['modal.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 export class ModalComponent implements OnInit, OnDestroy {
@@ -29,14 +29,17 @@ export class ModalComponent implements OnInit, OnDestroy {
     });
     this.modalService.add(this);
   }
+
   ngOnDestroy(): void {
     this.modalService.remove(this.id);
     this.element.remove();
   }
+
   open(): void {
     this.element.style.display = 'block';
     document.body.classList.add('app-modal-open');
   }
+
   close(): void {
     this.element.style.display = 'none';
     document.body.classList.remove('app-modal-open');

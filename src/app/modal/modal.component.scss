@@ -1,6 +1,5 @@
 app-modal {
   display: none;
-
   .app-modal {
     position: fixed;
     top: 0;
@@ -9,14 +8,17 @@ app-modal {
     left: 0;
     z-index: 1000;
     overflow: auto;
-
     .app-modal-body {
-      padding: 20px;
-      background: #fff;
-      margin: 40px;
+      background: rgb(235, 236, 237);
+      position: fixed;
+      width: 450px;
+      height: 270px;
+      margin: 100px auto;
+      left: 0;
+      right: 0;
+      padding: 0 25px;
     }
   }
-
   .app-modal-background {
     position: fixed;
     top: 0;
@@ -28,7 +30,6 @@ app-modal {
     z-index: 900;
   }
 }
-
 body.app-modal-open {
   overflow: hidden;
 }
