@@ -6,7 +6,7 @@ export const MenuData = {
     {
       menuItemName: 'Clothing',
       subMenuItem: [
-        'Outerweart',
+        'Outerwear',
         'Hiking Shoes/Boots',
         'Gloves',
         'Hats'
