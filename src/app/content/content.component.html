@@ -94,16 +94,16 @@
         </div>
         <div>
           <fieldset class="rating">
-            <input type="radio" [checked]="checked_5" id="star5" formControlName="rating" name="rating"
-              value="5" /><label class="full" for="star5"></label>
-            <input type="radio" [checked]="checked_4" id="star4" formControlName="rating" name="rating"
-              value="4" /><label class="full" for="star4"></label>
-            <input type="radio" [checked]="checked_3" id="star3" formControlName="rating" name="rating"
-              value="3" /><label class="full" for="star3"></label>
-            <input type="radio" [checked]="checked_2" id="star2" formControlName="rating" name="rating"
-              value="2" /><label class="full" for="star2"></label>
-            <input type="radio" [checked]="checked_1" id="star1" formControlName="rating" name="rating"
-              value="1" /><label class="full" for="star1"></label>
+            <input type="radio" id="star5" formControlName="rating" name="rating" value="5" /><label class="full"
+              for="star5"></label>
+            <input type="radio" id="star4" formControlName="rating" name="rating" value="4" /><label class="full"
+              for="star4"></label>
+            <input type="radio" id="star3" formControlName="rating" name="rating" value="3" /><label class="full"
+              for="star3"></label>
+            <input type="radio" id="star2" formControlName="rating" name="rating" value="2" /><label class="full"
+              for="star2"></label>
+            <input type="radio" id="star1" formControlName="rating" name="rating" value="1" /><label class="full"
+              for="star1"></label>
           </fieldset>
         </div>
       </div>
@@ -116,6 +116,9 @@
       <textarea class="review-name-three" rows="10" formControlName="reviewContent"
         placeholder=" - Write your review here -"></textarea>
       <div fxLayout fxLayoutAlign="end center">
+        <div class="form-warning" *ngIf="displayWarning">
+          Please fill out rating, title and review to submit this review
+        </div>
         <button class="review-button">Submit Review</button>
       </div>
     </div>

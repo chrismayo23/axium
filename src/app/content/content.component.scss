@@ -169,3 +169,10 @@ fieldset {
 .rating > input:checked ~ label:hover ~ label {
   color: rgb(122, 171, 180);
 }
+.form-warning {
+  position: relative;
+  bottom: 16px;
+  right: 50px;
+  color: rgb(204, 51, 51);
+  font-size: 11px;
+}
